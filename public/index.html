@@ -1197,15 +1197,15 @@ let socket = null;
 let isSocketConnected = false;
 
 function initSocket() {
-  /* PRODUCTION:
-  socket = io('wss://your-server.com', { transports:['websocket'] });
+  
+  socket = io('https://batalha-de-qi-production.up.railway.app', { transports:['websocket'] });
   socket.on('connect', ()=> { isSocketConnected=true; setConn('on','ONLINE'); });
   socket.on('disconnect', ()=> { isSocketConnected=false; setConn('','OFFLINE'); });
   socket.on('ranking_update', d => updateBotScores(d.ranking));
   socket.on('player_joined',  d => addLobbyPlayer(d));
   socket.on('round_start',    d => onServerRound(d));
   socket.on('game_over',      d => onServerGameOver(d));
-  */
+  
   setConn('', 'LOCAL');
 }
 

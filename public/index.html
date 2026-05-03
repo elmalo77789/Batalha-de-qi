@@ -1206,7 +1206,7 @@ function initSocket() {
   socket.on('round_start',    d => onServerRound(d));
   socket.on('game_over',      d => onServerGameOver(d));
   
-  setConn('', 'LOCAL');
+  setConn('online', 'ONLINE');
 }
 
 function setConn(cls, txt) {
